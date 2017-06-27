@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 public class BoxerTest {
 
-    Boxer boxer;
+    private Boxer boxer;
     private Boxer boxer1;
     private Boxer boxer2;
     private Boxer boxer3;
@@ -20,11 +20,16 @@ public class BoxerTest {
     @Before
     public void before(){
         boxer = new Boxer(20, 5);
-        boxer1 = new Boxer(20, 6);
-        boxer2 = new Boxer(20, 15);
-        boxer3 = new Boxer(20, 19);
+        boxer1 = new Boxer(10, 3);
+        boxer2 = new Boxer(20, 9);
+        boxer3 = new Boxer(13, 10);
     }
 
+    @Test
+    public void canCalculatePoints(){
+        boxer.enterEvent();
+        assertEquals(15, boxer.calculatePoints());
+    }
 
     @Test
     public void canAwardGold(){
@@ -33,22 +38,23 @@ public class BoxerTest {
     }
 
     @Test
-    public void canAwardSilver(){
+    public void canAwardBronze(){
         boxer1.enterEvent();
-        assertEquals("Silver", boxer.getMedalColour());
+        assertEquals("Bronze", boxer1.getMedalColour());
     }
 
     @Test
-    public void canAwardBronze(){
+    public void canAwardSilver(){
         boxer2.enterEvent();
-        assertEquals("Bronze", boxer.getMedalColour());
+        assertEquals("Silver", boxer2.getMedalColour());
     }
 
     @Test
     public void canAwardLoser(){
         boxer3.enterEvent();
-        assertEquals("Thanks for taking part", boxer.getMedalColour());
+        assertEquals("Thanks for taking part", boxer3.getMedalColour());
     }
+
 
 
 

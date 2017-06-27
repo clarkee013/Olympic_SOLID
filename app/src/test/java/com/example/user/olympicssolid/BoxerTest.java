@@ -19,17 +19,17 @@ public class BoxerTest {
 
     @Before
     public void before(){
-        boxer = new Boxer(20, 5);
-        boxer1 = new Boxer(10, 3);
-        boxer2 = new Boxer(20, 9);
+        boxer = new Boxer(20, 4);
+        boxer1 = new Boxer(20, 7);
+        boxer2 = new Boxer(10, 4);
         boxer3 = new Boxer(13, 10);
     }
 
     @Test
     public void canCalculatePoints(){
-        boxer.enterEvent();
-        assertEquals(15, boxer.calculatePoints());
+        assertEquals(16, boxer.calculatePoints());
     }
+
 
     @Test
     public void canAwardGold(){
@@ -40,13 +40,13 @@ public class BoxerTest {
     @Test
     public void canAwardBronze(){
         boxer1.enterEvent();
-        assertEquals("Bronze", boxer1.getMedalColour());
+        assertEquals("Silver", boxer1.getMedalColour());
     }
 
     @Test
     public void canAwardSilver(){
         boxer2.enterEvent();
-        assertEquals("Silver", boxer2.getMedalColour());
+        assertEquals("Bronze", boxer2.getMedalColour());
     }
 
     @Test

@@ -50,10 +50,7 @@ public class BoxerTest {
         assertEquals("Thanks for taking part", boxer.getMedalColour());
     }
 
-    @Test
-    public void canGetPointsCalculation(){
-        assertEquals(15, Boxer.calculatePoints());
-    }
+
 
 
 }

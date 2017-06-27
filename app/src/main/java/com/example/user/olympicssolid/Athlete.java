@@ -12,6 +12,7 @@ public abstract class Athlete {
     protected int pointsB;
     protected String medalColour;
 
+
     abstract int calculatePoints();
 
     public Athlete(int pointsA, int pointsB){
@@ -42,6 +43,9 @@ public abstract class Athlete {
     public String getMedalColour() {
         return medalColour;
     }
+
+//blah blah
+
 }
 
 

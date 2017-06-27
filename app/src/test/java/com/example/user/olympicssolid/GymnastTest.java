@@ -8,11 +8,11 @@ import org.junit.Before;
 
 public class GymnastTest {
 
-    Gymnast gymnast;
-
-    @Before
-    public void before(){
-        gymnast = new Gymnast(6, 5);
-    }
+//    Gymnast gymnast;
+//
+//    @Before
+//    public void before(){
+//        gymnast = new Gymnast(6, 5);
+//    }
 
 }

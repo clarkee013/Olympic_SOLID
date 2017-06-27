@@ -8,8 +8,8 @@ import static android.os.Looper.prepare;
 
 public abstract class Athlete {
 
-    protected int pointsA;
-    protected int pointsB;
+    protected static int pointsA;
+    protected static int pointsB;
     protected String medalColour;
 
 

@@ -15,13 +15,16 @@ public class BoxerTest {
     Boxer boxer;
     private Boxer boxer1;
     private Boxer boxer2;
+    private Boxer boxer3;
 
     @Before
     public void before(){
         boxer = new Boxer(20, 5);
-        boxer1 = new Boxer(10, 3);
-        boxer2 = new Boxer(20, 9);
+        boxer1 = new Boxer(20, 6);
+        boxer2 = new Boxer(20, 15);
+        boxer3 = new Boxer(20, 19);
     }
+
 
     @Test
     public void canAwardGold(){
@@ -30,8 +33,27 @@ public class BoxerTest {
     }
 
     @Test
-    public void canAwardBronze() throws Exception {
+    public void canAwardSilver(){
         boxer1.enterEvent();
+        assertEquals("Silver", boxer.getMedalColour());
+    }
+
+    @Test
+    public void canAwardBronze(){
+        boxer2.enterEvent();
         assertEquals("Bronze", boxer.getMedalColour());
     }
+
+    @Test
+    public void canAwardLoser(){
+        boxer3.enterEvent();
+        assertEquals("Thanks for taking part", boxer.getMedalColour());
+    }
+
+    @Test
+    public void canGetPointsCalculation(){
+        assertEquals(15, Boxer.calculatePoints());
+    }
+
+
 }

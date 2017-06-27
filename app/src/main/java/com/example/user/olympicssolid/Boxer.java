@@ -10,6 +10,7 @@ public class Boxer extends Athlete {
         super (pointsA, pointsB);
     }
 
+
     public int calculatePoints(){
         int totalPoints = pointsA - pointsB;
         return totalPoints;

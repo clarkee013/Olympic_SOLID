@@ -17,7 +17,7 @@ public class Medal {
             return "Bronze";
         }
         else{
-            return "No Award";
+            return "Thanks for taking part";
         }
     }
 }

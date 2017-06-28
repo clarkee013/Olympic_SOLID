@@ -18,14 +18,14 @@ public class GymnastTest {
 
     @Before
     public void before() {
-        gymnast = new Gymnast(20, 4);
-        gymnast1 = new Gymnast(20, 7);
-        gymnast2 = new Gymnast(10, 4);
-        gymnast3 = new Gymnast(13, 10);
+        gymnast = new Gymnast(12, 4);
+        gymnast1 = new Gymnast(6, 7);
+        gymnast2 = new Gymnast(2, 4);
+        gymnast3 = new Gymnast(2, 1);
     }
 
     @Test
-    public void canCalculatePoints() {
+    public void canCalculatePoints()throws Exception {
         assertEquals(16, gymnast.calculatePoints());
     }
 

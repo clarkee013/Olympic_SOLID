@@ -21,3 +21,15 @@ public class Medal {
         }
     }
 }
+
+//    public void awardMedal(int points) {
+//        if (points >= 15) {
+//            System.out.println("Gold");
+//        } else if (points >= 10 && points <= 14){
+//            System.out.println("Silver");
+//        } else if (points >= 5 && points <= 9) {
+//            System.out.println("Bronze");
+//        } else {
+//            System.out.println("Not Placed");
+//        }
+//    }

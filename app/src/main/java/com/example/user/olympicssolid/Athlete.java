@@ -8,10 +8,9 @@ import static android.os.Looper.prepare;
 
 public abstract class Athlete {
 
-    protected static int pointsA;
-    protected static int pointsB;
+    protected int pointsA;
+    protected int pointsB;
     protected String medalColour;
-
 
     abstract int calculatePoints();
 
@@ -33,11 +32,17 @@ public abstract class Athlete {
         this.medalColour = Medal.medalAward(total);
     }
 
+    public void finishEvent(){
+        System.out.println(medalColour);
+    }
+
     public void enterEvent(){
         prepare();
         compete();
         int total = calculatePoints();
         awardMedal(total);
+        finishEvent();
+
     }
 
     public String getMedalColour() {
